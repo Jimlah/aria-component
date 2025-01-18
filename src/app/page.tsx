@@ -120,7 +120,9 @@ export default function Home() {
         <OptionList>
           <Option id={"Aardvark"}>Aardvark</Option>
           <Option id={"Cat"}>Cat</Option>
-          <Option id={"Dog"}>Dog</Option>
+          <Option id={"Dog"} isDisabled={true}>
+            Dog
+          </Option>
           <Option id={"Kangaroo"}>Kangaroo</Option>
           <Option id={"Panda"}>Panda</Option>
           <Option id={"Snake"}>Snake</Option>

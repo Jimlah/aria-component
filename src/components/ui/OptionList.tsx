@@ -10,7 +10,7 @@ const OptionList = (props: ListBoxProps<object | string[]>) => {
   return (
     <Popover className="w-auto outline-none">
       <AriaOptionList
-        className="outline-none min-w-[var(--trigger-width)] max-h-[600px] bg-white overflow-hidden rounded-md shadow-md border border-gray-300/50"
+        className="outline-none min-w-[var(--trigger-width)] p-1 max-h-[600px] bg-white overflow-hidden rounded-md shadow-md border border-gray-300/50"
         {...props}
       />
     </Popover>

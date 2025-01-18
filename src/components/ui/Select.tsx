@@ -7,7 +7,9 @@ import { twMerge } from "tailwind-merge";
 const Select = ({ className, ...props }: SelectProps) => {
   return (
     <AriaSelect
-      className={twMerge(clsx("outline-none group", className))}
+      className={twMerge(
+        clsx("outline-none group relative isolate", className)
+      )}
       {...props}
     />
   );
