@@ -4,7 +4,7 @@ import Input from "@/components/ui/Input";
 import Label from "@/components/ui/Label";
 import SearchField from "@/components/ui/SearchField";
 import TextField from "@/components/ui/TextField";
-import { Eye, Search } from "lucide-react";
+import { Eye, EyeClosed, Search } from "lucide-react";
 
 export default function Home() {
   return (
@@ -23,7 +23,7 @@ export default function Home() {
             className="group outline-none px-2"
           >
             <Eye className="size-4 aspect-square group-data-[type=password]:hidden group-data-[type=text]:block" />
-            {/* <EyeClosed className="size-4 aspect-square group-data-[type=password]:block group-data-[type=text]:hidden" /> */}
+            <EyeClosed className="size-4 aspect-square group-data-[type=password]:block group-data-[type=text]:hidden" />
           </Button>
         </Group>
       </TextField>

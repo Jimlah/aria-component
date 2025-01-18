@@ -40,9 +40,9 @@ const TextField = ({
               [DEFAULT_SLOT]: {},
               password: {
                 onPress: changeType,
+                "data-type": type,
               },
             },
-            "data-input": "cool",
           } as ButtonProps,
         ],
       ]}
