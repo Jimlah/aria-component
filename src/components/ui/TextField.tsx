@@ -49,7 +49,7 @@ const TextField = ({
     >
       <AriaTextField
         className={twMerge(
-          clsx("w-full flex flex-col isolate relative", className)
+          clsx("w-full flex flex-col isolate relative group", className)
         )}
         {...props}
       />
