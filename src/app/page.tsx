@@ -109,7 +109,7 @@ export default function Home() {
           <Option id={"Snake"}>Snake</Option>
         </OptionList>
       </Select>
-      <Select className="w-[404px]" isInvalid={false}>
+      <Select className="w-[404px]" isInvalid={false} isRequired={true}>
         <Label>Favorite Animal</Label>
         <SelectButton>
           <SelectValue />
