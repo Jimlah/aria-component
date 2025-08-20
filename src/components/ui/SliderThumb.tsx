@@ -1,7 +1,10 @@
 "use client";
 
 import clsx from "clsx";
-import { SliderThumb as AriaSliderThumb, SliderThumbProps } from "react-aria-components";
+import {
+  SliderThumb as AriaSliderThumb,
+  SliderThumbProps,
+} from "react-aria-components";
 import { twMerge } from "tailwind-merge";
 
 const SliderThumb = ({ className, ...props }: SliderThumbProps) => {
@@ -15,7 +18,7 @@ const SliderThumb = ({ className, ...props }: SliderThumbProps) => {
           "data-[dragging=true]:bg-blue-700 data-[dragging=true]:scale-110",
           "data-[disabled=true]:cursor-not-allowed",
           "transition-all duration-150",
-          "relative z-10",
+          "relative z-10 translate-y-1",
           className
         )
       )}

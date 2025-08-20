@@ -9,7 +9,7 @@ const Slider = ({ className, ...props }: SliderProps<number | number[]>) => {
     <AriaSlider
       className={twMerge(
         clsx(
-          "group flex flex-col gap-2 w-full",
+          "group relative flex flex-col gap-2 w-full",
           "data-[orientation=horizontal]:w-full",
           "data-[orientation=vertical]:h-full data-[orientation=vertical]:flex-row",
           "data-[disabled=true]:opacity-50",
