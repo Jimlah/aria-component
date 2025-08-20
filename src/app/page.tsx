@@ -19,7 +19,13 @@ import SliderThumb from "@/components/ui/SliderThumb";
 import Heading from "@/components/ui/Heading";
 import Text from "@/components/ui/Text";
 import Separator from "@/components/ui/Separator";
-import { ChevronDown, Eye, EyeClosed, Search } from "lucide-react";
+import Table from "@/components/ui/Table";
+import TableHeader from "@/components/ui/TableHeader";
+import TableBody from "@/components/ui/TableBody";
+import Column from "@/components/ui/Column";
+import Row from "@/components/ui/Row";
+import Cell from "@/components/ui/Cell";
+import { ChevronDown, Eye, EyeClosed, Search, ArrowUpDown } from "lucide-react";
 
 export default function Home() {
   return (
@@ -288,6 +294,233 @@ export default function Home() {
                   <Input placeholder="Search users..." />
                 </Group>
               </SearchField>
+            </div>
+          </div>
+        </div>
+
+        <Separator />
+
+        <div className="space-y-6">
+          <Heading className="text-2xl">Data Display - Table Components</Heading>
+          
+          <div className="space-y-8">
+            {/* Basic Data Table */}
+            <div className="space-y-4">
+              <Heading className="text-lg">Employee Directory</Heading>
+              <Table aria-label="Employee directory">
+                <TableHeader>
+                  <Column isRowHeader>Name</Column>
+                  <Column>Department</Column>
+                  <Column>Role</Column>
+                  <Column>Status</Column>
+                </TableHeader>
+                <TableBody>
+                  <Row>
+                    <Cell>Sarah Chen</Cell>
+                    <Cell>Engineering</Cell>
+                    <Cell>Senior Developer</Cell>
+                    <Cell>
+                      <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                        Active
+                      </span>
+                    </Cell>
+                  </Row>
+                  <Row>
+                    <Cell>Michael Rodriguez</Cell>
+                    <Cell>Design</Cell>
+                    <Cell>UX Designer</Cell>
+                    <Cell>
+                      <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                        Active
+                      </span>
+                    </Cell>
+                  </Row>
+                  <Row>
+                    <Cell>Emily Johnson</Cell>
+                    <Cell>Marketing</Cell>
+                    <Cell>Content Manager</Cell>
+                    <Cell>
+                      <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800">
+                        Away
+                      </span>
+                    </Cell>
+                  </Row>
+                  <Row>
+                    <Cell>David Kim</Cell>
+                    <Cell>Engineering</Cell>
+                    <Cell>DevOps Engineer</Cell>
+                    <Cell>
+                      <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                        Active
+                      </span>
+                    </Cell>
+                  </Row>
+                </TableBody>
+              </Table>
+            </div>
+
+            {/* Sortable Table */}
+            <div className="space-y-4">
+              <Heading className="text-lg">Product Inventory (Sortable)</Heading>
+              <Table aria-label="Product inventory" selectionMode="multiple">
+                <TableHeader>
+                  <Column isRowHeader allowsSorting>
+                    Product Name
+                    <ArrowUpDown className="inline ml-1 w-3 h-3" />
+                  </Column>
+                  <Column allowsSorting>
+                    Price
+                    <ArrowUpDown className="inline ml-1 w-3 h-3" />
+                  </Column>
+                  <Column allowsSorting>
+                    Stock
+                    <ArrowUpDown className="inline ml-1 w-3 h-3" />
+                  </Column>
+                  <Column>Category</Column>
+                </TableHeader>
+                <TableBody>
+                  <Row id="laptop">
+                    <Cell>MacBook Pro 16&quot;</Cell>
+                    <Cell>$2,399</Cell>
+                    <Cell>12</Cell>
+                    <Cell>Computers</Cell>
+                  </Row>
+                  <Row id="phone">
+                    <Cell>iPhone 15 Pro</Cell>
+                    <Cell>$999</Cell>
+                    <Cell>25</Cell>
+                    <Cell>Mobile</Cell>
+                  </Row>
+                  <Row id="headphones">
+                    <Cell>AirPods Pro</Cell>
+                    <Cell>$249</Cell>
+                    <Cell>50</Cell>
+                    <Cell>Audio</Cell>
+                  </Row>
+                  <Row id="tablet">
+                    <Cell>iPad Air</Cell>
+                    <Cell>$599</Cell>
+                    <Cell>8</Cell>
+                    <Cell>Tablets</Cell>
+                  </Row>
+                  <Row id="watch">
+                    <Cell>Apple Watch Series 9</Cell>
+                    <Cell>$399</Cell>
+                    <Cell>15</Cell>
+                    <Cell>Wearables</Cell>
+                  </Row>
+                </TableBody>
+              </Table>
+            </div>
+
+            {/* Financial Data Table */}
+            <div className="space-y-4">
+              <Heading className="text-lg">Monthly Sales Report</Heading>
+              <Table aria-label="Monthly sales report">
+                <TableHeader>
+                  <Column isRowHeader>Month</Column>
+                  <Column>Revenue</Column>
+                  <Column>Growth</Column>
+                  <Column>Target</Column>
+                  <Column>Performance</Column>
+                </TableHeader>
+                <TableBody>
+                  <Row>
+                    <Cell>January</Cell>
+                    <Cell className="font-mono">$45,280</Cell>
+                    <Cell className="text-green-600 font-medium">+12.5%</Cell>
+                    <Cell className="font-mono">$42,000</Cell>
+                    <Cell>
+                      <div className="w-full bg-gray-200 rounded-full h-2">
+                        <div className="bg-green-600 h-2 rounded-full" style={{width: "108%"}}></div>
+                      </div>
+                    </Cell>
+                  </Row>
+                  <Row>
+                    <Cell>February</Cell>
+                    <Cell className="font-mono">$38,950</Cell>
+                    <Cell className="text-red-600 font-medium">-8.2%</Cell>
+                    <Cell className="font-mono">$44,000</Cell>
+                    <Cell>
+                      <div className="w-full bg-gray-200 rounded-full h-2">
+                        <div className="bg-red-500 h-2 rounded-full" style={{width: "89%"}}></div>
+                      </div>
+                    </Cell>
+                  </Row>
+                  <Row>
+                    <Cell>March</Cell>
+                    <Cell className="font-mono">$52,100</Cell>
+                    <Cell className="text-green-600 font-medium">+15.3%</Cell>
+                    <Cell className="font-mono">$46,000</Cell>
+                    <Cell>
+                      <div className="w-full bg-gray-200 rounded-full h-2">
+                        <div className="bg-green-600 h-2 rounded-full" style={{width: "113%"}}></div>
+                      </div>
+                    </Cell>
+                  </Row>
+                </TableBody>
+              </Table>
+            </div>
+
+            {/* Task Management Table */}
+            <div className="space-y-4">
+              <Heading className="text-lg">Project Tasks</Heading>
+              <Table aria-label="Project tasks" selectionMode="single">
+                <TableHeader>
+                  <Column isRowHeader>Task</Column>
+                  <Column>Assignee</Column>
+                  <Column>Priority</Column>
+                  <Column>Due Date</Column>
+                  <Column>Status</Column>
+                </TableHeader>
+                <TableBody>
+                  <Row>
+                    <Cell>Implement user authentication</Cell>
+                    <Cell>Sarah Chen</Cell>
+                    <Cell>
+                      <span className="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-red-100 text-red-800">
+                        High
+                      </span>
+                    </Cell>
+                    <Cell>2024-01-15</Cell>
+                    <Cell>
+                      <span className="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-blue-100 text-blue-800">
+                        In Progress
+                      </span>
+                    </Cell>
+                  </Row>
+                  <Row>
+                    <Cell>Design system components</Cell>
+                    <Cell>Michael Rodriguez</Cell>
+                    <Cell>
+                      <span className="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-yellow-100 text-yellow-800">
+                        Medium
+                      </span>
+                    </Cell>
+                    <Cell>2024-01-20</Cell>
+                    <Cell>
+                      <span className="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-green-100 text-green-800">
+                        Completed
+                      </span>
+                    </Cell>
+                  </Row>
+                  <Row>
+                    <Cell>Write API documentation</Cell>
+                    <Cell>Emily Johnson</Cell>
+                    <Cell>
+                      <span className="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-green-100 text-green-800">
+                        Low
+                      </span>
+                    </Cell>
+                    <Cell>2024-01-25</Cell>
+                    <Cell>
+                      <span className="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-gray-100 text-gray-800">
+                        Pending
+                      </span>
+                    </Cell>
+                  </Row>
+                </TableBody>
+              </Table>
             </div>
           </div>
         </div>
