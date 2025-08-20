@@ -11,6 +11,7 @@ const Switch = ({ className, ...props }: SwitchProps) => {
         clsx(
           "group flex items-center gap-2 text-sm cursor-pointer",
           "data-[disabled=true]:cursor-not-allowed data-[disabled=true]:opacity-50",
+          "[&>*:first-child]:pointer-events-none",
           className
         )
       )}

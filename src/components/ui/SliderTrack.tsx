@@ -13,6 +13,7 @@ const SliderTrack = ({ className, ...props }: SliderTrackProps) => {
           "group-data-[orientation=horizontal]:w-full group-data-[orientation=horizontal]:h-2",
           "group-data-[orientation=vertical]:h-full group-data-[orientation=vertical]:w-2",
           "cursor-pointer",
+          "[&>*]:pointer-events-none",
           className
         )
       )}

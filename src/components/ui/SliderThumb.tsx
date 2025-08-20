@@ -15,6 +15,7 @@ const SliderThumb = ({ className, ...props }: SliderThumbProps) => {
           "data-[dragging=true]:bg-blue-700 data-[dragging=true]:scale-110",
           "data-[disabled=true]:cursor-not-allowed",
           "transition-all duration-150",
+          "relative z-10",
           className
         )
       )}
